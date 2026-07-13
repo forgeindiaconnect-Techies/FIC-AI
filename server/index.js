@@ -159,10 +159,14 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl)
     if (!origin) return callback(null, true);
     
-    if (allowedOrigins.includes(origin) || (process.env.CLIENT_URL && origin === process.env.CLIENT_URL)) {
+    // Check if origin is localhost or ends with .vercel.app
+    const isLocal = origin.startsWith('http://localhost:') || origin.startsWith('http://127.0.0.1:');
+    const isVercel = origin.endsWith('.vercel.app');
+    const isAllowedCustom = allowedOrigins.includes(origin) || (process.env.CLIENT_URL && origin === process.env.CLIENT_URL);
+
+    if (isLocal || isVercel || isAllowedCustom) {
       return callback(null, true);
     }
     
