@@ -13,13 +13,18 @@ dist/
 *.bin
 *.safetensors
 gfpgan/
-models/
-server/models/
+# Only exclude large AI weight files inside models/, not JS model files
+server/models/*.pth
+server/models/*.ckpt
+server/models/*.pt
+server/models/*.bin
+server/models/*.safetensors
 
 # Uploaded & Generated files (too large for GitHub)
 server/uploads/
 server/generated/
 server/public/
+tmp/
 
 # Log & debug files
 *.log
