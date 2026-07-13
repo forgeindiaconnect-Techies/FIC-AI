@@ -58,6 +58,7 @@ export default function UpgradePlan({ setCurrentTab }) {
       }
 
       const orderData = res.data;
+      console.log('Payment Order Response:', orderData);
 
       // ── TEST MODE: skip Razorpay modal, simulate success directly ────────────
       if (orderData.testMode) {
@@ -154,13 +155,13 @@ export default function UpgradePlan({ setCurrentTab }) {
 
       {/* Main Container */}
       <div className="flex-1 overflow-y-auto px-4 md:px-8 py-6 space-y-8 scrollbar-thin">
-        
+
         {/* Banner */}
         <div className="bg-gradient-to-r from-[#2e0854] via-[#7C3AED]/20 to-[#0EA5E9]/15 border border-[#7C3AED]/35 p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden">
           {/* Glowing Aura */}
           <div className="absolute w-64 h-64 bg-[#7C3AED]/10 blur-3xl -top-12 -right-12 rounded-full pointer-events-none" />
           <div className="absolute w-48 h-48 bg-[#0EA5E9]/5 blur-3xl -bottom-12 -left-12 rounded-full pointer-events-none" />
-          
+
           <div className="space-y-3 z-10 text-center md:text-left">
             <div className="inline-flex flex-wrap justify-center md:justify-start items-center gap-3 text-[9px] text-[#A78BFA] font-black uppercase tracking-wider bg-white/[0.02] border border-white/5 px-3 py-1.5 rounded-full">
               <span>🛡️ Cancel anytime</span>
@@ -180,7 +181,7 @@ export default function UpgradePlan({ setCurrentTab }) {
             <div className="relative animate-float">
               <div className="absolute inset-0 bg-[#A78BFA]/20 blur-xl rounded-full scale-75 animate-pulse" />
               <svg className="w-24 h-24 text-[#A78BFA] filter drop-shadow-[0_0_15px_rgba(167,139,250,0.6)]" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M2 22h20v-2H2v2zm2-4h16V9l-4 4-4-6-4 6-4-4v9z"/>
+                <path d="M2 22h20v-2H2v2zm2-4h16V9l-4 4-4-6-4 6-4-4v9z" />
               </svg>
             </div>
           </div>
@@ -188,7 +189,7 @@ export default function UpgradePlan({ setCurrentTab }) {
 
         {/* Pricing Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-          
+
           {/* Card 1: Free Plan */}
           <div className="bg-[#0B0F1D]/40 border border-white/5 p-6 rounded-2xl flex flex-col justify-between hover:border-white/10 transition-all duration-300 relative group">
             <div className="space-y-4">
@@ -206,9 +207,9 @@ export default function UpgradePlan({ setCurrentTab }) {
               >
                 Current Plan
               </button>
-              
+
               <hr className="border-white/5 my-2" />
-              
+
               <ul className="space-y-2.5 text-xs text-slate-300">
                 <li className="flex items-start gap-2.5">
                   <span className="text-emerald-400 shrink-0">✓</span>
@@ -273,9 +274,9 @@ export default function UpgradePlan({ setCurrentTab }) {
               >
                 Upgrade to Pro
               </button>
-              
+
               <hr className="border-white/10 my-2" />
-              
+
               <ul className="space-y-2.5 text-xs text-slate-200">
                 <li className="flex items-start gap-2.5">
                   <span className="text-cyan-400 shrink-0">✓</span>
@@ -331,9 +332,9 @@ export default function UpgradePlan({ setCurrentTab }) {
               >
                 Upgrade to Business
               </button>
-              
+
               <hr className="border-white/5 my-2" />
-              
+
               <ul className="space-y-2.5 text-xs text-slate-300">
                 <li className="flex items-start gap-2.5 text-amber-300 font-semibold">
                   <span className="shrink-0">✓</span>
@@ -367,7 +368,7 @@ export default function UpgradePlan({ setCurrentTab }) {
             <span className="text-base">⚖️</span>
             <h3 className="text-sm font-black text-white uppercase tracking-widest">All Features Comparison</h3>
           </div>
-          
+
           <div className="overflow-x-auto rounded-2xl border border-white/5 bg-[#0B0F1D]/30 backdrop-blur-md">
             <table className="w-full text-left text-xs border-collapse">
               <thead>
@@ -443,7 +444,7 @@ export default function UpgradePlan({ setCurrentTab }) {
       {/* Checkout Modal Overlay */}
       {checkoutPlan && (
         <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/80 backdrop-blur-md p-4 animate-fadeIn" onClick={handleCloseCheckout}>
-          <div 
+          <div
             className="w-full max-w-md bg-[#0B0F1D]/95 border border-[#7C3AED]/30 rounded-3xl p-6 shadow-2xl relative space-y-6"
             onClick={e => e.stopPropagation()}
             style={{
@@ -451,8 +452,8 @@ export default function UpgradePlan({ setCurrentTab }) {
             }}
           >
             {/* Close Button */}
-            <button 
-              onClick={handleCloseCheckout} 
+            <button
+              onClick={handleCloseCheckout}
               className="absolute top-4 right-4 w-7 h-7 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-white flex items-center justify-center text-sm cursor-pointer transition-colors"
             >
               ✕
