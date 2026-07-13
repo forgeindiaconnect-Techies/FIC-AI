@@ -65,20 +65,7 @@ router.post('/payment/create-order', async (req, res) => {
       return res.status(500).json({ success: false, error: 'Payment gateway configuration error' });
     }
 
-    // ── TEST MODE: bypass Razorpay API for local development ──────────────────
-    if (process.env.PAYMENT_TEST_MODE === 'true' || keyId.startsWith('rzp_test_')) {
-      console.log('[Payment API] TEST MODE - returning mock order for', email);
-      const mockOrderId = `order_test_${Date.now()}`;
-      return res.json({
-        success: true,
-        orderId: mockOrderId,
-        keyId: keyId,
-        amount: amountInPaise,
-        currency: 'INR',
-        testMode: true
-      });
-    }
-    // ─────────────────────────────────────────────────────────────────────────
+
 
     const razorpayResponse = await axios.post(
       'https://api.razorpay.com/v1/orders',

@@ -60,15 +60,6 @@ export default function UpgradePlan({ setCurrentTab }) {
       const orderData = res.data;
       console.log('Payment Order Response:', orderData);
 
-      // ── TEST MODE: skip Razorpay modal, simulate success directly ────────────
-      if (orderData.testMode) {
-        console.log('[Payment] TEST MODE - simulating successful upgrade to', plan.type);
-        setPaymentStatus('success');
-        localStorage.setItem('fic_user_tier', plan.type);
-        window.dispatchEvent(new Event('fic_user_login_state_changed'));
-        return;
-      }
-      // ─────────────────────────────────────────────────────────────────────────
 
       // 2. Configure & Open Razorpay checkout options
       const options = {
