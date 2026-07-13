@@ -1,0 +1,44 @@
+/* ── Chat.css ─────────────────────────────────────────────────────────────── */
+/*
+  All message bubble styling is handled via inline styles in Chat.jsx.
+  This file only contains export button helpers and scrollbar styles.
+*/
+
+/* Export buttons */
+.export-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgba(124, 58, 237, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.35);
+  color: #A78BFA;
+}
+.export-btn:hover:not(:disabled) {
+  background: rgba(124, 58, 237, 0.3);
+  border-color: rgba(124, 58, 237, 0.6);
+  color: #C4B5FD;
+  transform: translateY(-1px);
+}
+.export-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Thin custom scrollbar */
+.scrollbar-thin { scrollbar-width: thin; scrollbar-color: rgba(124,58,237,0.3) transparent; }
+.scrollbar-thin::-webkit-scrollbar { width: 5px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(124,58,237,0.3); border-radius: 999px; }
+.scrollbar-thin::-webkit-scrollbar-thumb:hover { background: rgba(124,58,237,0.55); }
+
+/* Fade-in for loading */
+@keyframes fadeIn { from { opacity:0; transform:translateY(6px);} to { opacity:1; transform:translateY(0);} }
+.animate-fadeIn { animation: fadeIn 0.25s ease forwards; }

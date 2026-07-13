@@ -1,0 +1,34 @@
+node_modules/
+.env
+server/.env
+dist/
+/build/
+.vscode/
+.DS_Store
+
+# Large AI Model Files
+*.pth
+*.ckpt
+*.pt
+*.bin
+*.safetensors
+gfpgan/
+models/
+server/models/
+
+# Uploaded & Generated files (too large for GitHub)
+server/uploads/
+server/generated/
+server/public/
+
+# Log & debug files
+*.log
+diagnostics.txt
+did_probe.txt
+ffmpeg_encoders.txt
+test_providers.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo

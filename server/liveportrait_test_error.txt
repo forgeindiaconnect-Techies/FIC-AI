@@ -1,0 +1,11 @@
+
+========================================
+ERROR: NONE
+STDERR: NONE
+STDOUT: Fetching female TTS: http://localhost:5001/api/video/tts?text=Hello%2C%20this%20is%20a%20test%20of%20the%20male%20voice%20presentation.&lang=english&gender=female
+Female voice bytes received: 24192
+Fetching male TTS: http://localhost:5001/api/video/tts?text=Hello%2C%20this%20is%20a%20test%20of%20the%20male%20voice%20presentation.&lang=english&gender=male
+Male voice bytes received: 24048
+✓ SUCCESS: Female and Male TTS audio data are DIFFERENT! Gender is working correctly at API level.
+
+========================================

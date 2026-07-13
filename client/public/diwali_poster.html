@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Diwali Poster</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    /* ----------- Canvas & Layout ----------- */
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #111; /* dark fallback */
+    }
+    #poster {
+      position: relative;
+      width: 1080px;
+      height: 1350px;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      background: radial-gradient(circle at 30% 30%, #5b2c6f, #2c003e);
+    }
+    /* ----------- Background Artwork ----------- */
+    .bg-art {
+      position: absolute;
+      inset: 0;
+      background-image:
+        /* diyas */
+        url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA3MiA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjRkZDIj48cGF0aCBkPSJNNTUgMzcuOWMtMy45LTAuNy04LjYtMS41LTE0LjctMS44bS0xNCA1LjBjLjYgMi4yLjkgNC40IDIuMSA2LjIgMS44IDMuMCAzLjcgNi41IDYuMSA4LjkgLjggMS4yIDEuMiAyLjIgMS41IDMuN2MwLjMgMi41LjMgNC43LjYgNi43IDEuMiAyLjkgMi4xIDUuMiAzLjMgNy44LjEgLjc4LjEgMS42LjIgMi40LjYgMS44IDEgMy41IDEuNSAyLjcuMiAyLjcgMi41IDMuMSAyLjQgMS45LjQgMi41LjYgMi41LjR6Ii8+PC9nPjwvc3ZnPg=='),
+        /* fireworks (simple radial bursts) */
+        radial-gradient(circle at 80% 20%, rgba(255,215,0,0.25) 0%, transparent 70%),
+        radial-gradient(circle at 20% 80%, rgba(255,215,0,0.2) 0%, transparent 70%),
+        /* bokeh lights */
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 40%);
+      background-size: 100% 100%, 400px 400px, 400px 400px, 300px 300px;
+      background-repeat: no-repeat;
+    }
+    /* ----------- Top Section ----------- */
+    .top {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAyMCAzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAgMTZoMi41bC0yLjUgMi41IDIuNSAyLjUtMi41IDIuNXYtMy45bDAgMy45LTIuNSAyLjV6IiBmaWxsPSIjRkZGIi8+PC9zdmc+');
+      background-size: contain;
+      background-repeat: no-repeat;
+      filter: drop-shadow(0 0 8px rgba(255,215,0,0.8));
+    }
+    .festival {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 48px;
+      color: #fff;
+      text-shadow: 0 0 8px rgba(255,215,0,0.9);
+    }
+    /* ----------- Center Title ----------- */
+    .title {
+      position: absolute;
+      top: 250px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 120px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #d4af37, #ffd700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 12px rgba(255,215,0,0.6);
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 4px rgba(255,215,0,0.4), 0 0 8px rgba(255,215,0,0.3); }
+      to   { text-shadow: 0 0 12px rgba(255,215,0,0.8), 0 0 20px rgba(255,215,0,0.6); }
+    }
+    /* ----------- Middle Greeting Card ----------- */
+    .card {
+      position: absolute;
+      top: 440px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 950px;
+      padding: 30px;
+      background: rgba(255,255,255,0.08);
+      border: 4px solid rgba(255,215,0,0.6);
+      border-radius: 15px;
+      backdrop-filter: blur(8px);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+    }
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 48px;
+    }
+    .card p {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.4;
+    }
+    /* Decorative border pattern (simple pseudo‑elements) */
+    .card::before, .card::after {
+      content: '';
+      position: absolute;
+      inset: -10px;
+      border: 2px dashed rgba(255,215,0,0.4);
+      border-radius: 20px;
+    }
+    /* ----------- Bottom CTA & Contact ----------- */
+    .bottom {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 950px;
+      text-align: center;
+    }
+    .cta {
+      display: inline-block;
+      padding: 18px 44px;
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #aa00ff, #ffea00);
+      color: #111;
+      font-size: 28px;
+      font-weight: 700;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 0 12px rgba(255,215,0,0.7);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 20px rgba(255,215,0,1);
+    }
+    .contact {
+      color: #ddd;
+      font-size: 22px;
+    }
+    .social {
+      margin-top: 12px;
+    }
+    .social a {
+      margin: 0 8px;
+      display: inline-block;
+      width: 38px;
+      height: 38px;
+      background: #fff;
+      border-radius: 50%;
+      color: #111;
+      line-height: 38px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="poster">
+    <div class="bg-art"></div>
+    <div class="top">
+      <div class="logo" aria-label="Diwali diya icon"></div>
+      <div class="festival">FIC Festival</div>
+    </div>
+    <div class="title">HAPPY DIWALI</div>
+    <div class="card">
+      <h2>Warm Wishes!</h2>
+      <p>May the lights of Diwali bring joy, prosperity, and happiness to you and your family.</p>
+    </div>
+    <div class="bottom">
+      <a href="#" class="cta">Join the Celebration</a>
+      <div class="contact">Contact: info@ficfestival.com | +91 98765 43210</div>
+      <div class="social">
+        <a href="#" title="Facebook">F</a>
+        <a href="#" title="Instagram">I</a>
+        <a href="#" title="Twitter">T</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

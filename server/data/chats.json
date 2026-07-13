@@ -1,0 +1,19 @@
+{
+  "chat_1783921978675": {
+    "chatId": "chat_1783921978675",
+    "title": "hii",
+    "createdAt": "2026-07-13T05:52:58.696Z",
+    "messages": [
+      {
+        "role": "user",
+        "text": "hii",
+        "timestamp": "2026-07-13T05:52:58.696Z"
+      },
+      {
+        "role": "assistant",
+        "text": "Hello there! How can I assist you today? Feel free to ask any questions you have.",
+        "timestamp": "2026-07-13T05:53:00.534Z"
+      }
+    ]
+  }
+}

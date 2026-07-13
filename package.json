@@ -1,0 +1,28 @@
+{
+  "name": "forge-ai",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "install-all": "npm install && npm run install-client && npm run install-server",
+    "install-client": "npm --workspace client install",
+    "install-server": "npm --workspace server install",
+    "dev": "concurrently \"npm run dev --workspace client\" \"npm run dev --workspace server\"",
+    "dev-client": "npm --workspace client run dev",
+    "dev-server": "npm --workspace server run dev",
+    "start": "npm run start --prefix server",
+    "build": "npm install --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "fabric": "^7.4.0",
+    "sharp": "^0.35.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

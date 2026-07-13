@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 175" width="440" height="175">
+  <!-- Bracket (Bright Cyan/Blue with diagonal cut on the left vertical bar) -->
+  <polygon points="12,18 112,18 112,38 32,38 32,110 12,130" fill="#00A8E8"/>
+
+  <!-- Yellow pyramid inside bracket -->
+  <polygon points="67,130 32,130 67,68" fill="#F7C520"/>
+  <polygon points="67,68 102,130 67,130" fill="#D9A800"/>
+
+  <!-- Flag pole (Bright Cyan/Blue) -->
+  <line x1="67" y1="68" x2="67" y2="38" stroke="#00A8E8" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Rectangular Flag (Yellow) -->
+  <rect x="67.5" y="38" width="38" height="20" fill="#F7C520"/>
+
+  <!-- Elephant silhouette (Blue silhouette facing left, centered on the yellow flag) -->
+  <path d="M 94,48 
+           c 0,-2.5 -2,-4.5 -4.5,-4.5 
+           c -1.5,0 -2.8,0.8 -3.5,2 
+           c -0.8,-1.2 -2.2,-2 -3.7,-2 
+           c -2.5,0 -4.5,2 -4.5,4.5 
+           c 0,0.5 0.1,1 0.2,1.5 
+           l -1.5,1 
+           c -0.8,0.5 -1,1.5 -0.5,2.2 
+           c 0.5,0.8 1.5,1 2.2,0.5 
+           l 1,-0.7 
+           c 0.5,0.8 1.4,1.3 2.5,1.3 
+           l 0.3,2 
+           c 0,0.5 0.5,1 1,1 
+           s 1,-0.5 1,-1 
+           l -0.2,-2 
+           c 0.6,0 1.2,-0.2 1.7,-0.5 
+           l 0.5,2 
+           c 0,0.5 0.5,1 1,1 
+           s 1,-0.5 1,-1 
+           l -0.5,-2 
+           c 0.6,0 1.1,-0.3 1.5,-0.7 
+           l 0.8,2 
+           c 0,0.5 0.5,1 1,1 
+           s 1,-0.5 1,-1 
+           l -0.8,-2 
+           c 1.5,-1 2.3,-2.5 2.3,-4.3 
+           z" fill="#00529B"/>
+
+  <!-- Text: FORGE -->
+  <text x="142" y="84" font-family="'Arial Black', 'Arial Bold', Arial, sans-serif" font-weight="900" font-size="46" fill="#00A8E8" letter-spacing="1">FORGE</text>
+
+  <!-- Text: INDIA -->
+  <text x="308" y="84" font-family="'Arial Black', 'Arial Bold', Arial, sans-serif" font-weight="900" font-size="46" fill="#F7C520" letter-spacing="1">INDIA</text>
+
+  <!-- Text: CONN ECT PVT.LTD -->
+  <text x="142" y="118" font-family="Arial, sans-serif" font-weight="700" font-size="22" fill="#FFFFFF" letter-spacing="1.5">CONN ECT PVT.LTD</text>
+
+  <!-- Text: SHAPING FUTURE with decorative dashes -->
+  <text x="146" y="150" font-family="Arial, sans-serif" font-weight="400" font-size="15" fill="#FFFFFF" opacity="0.8" letter-spacing="4">— SHAPING FUTURE —</text>
+</svg>

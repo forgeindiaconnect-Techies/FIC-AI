@@ -1,0 +1,30 @@
+Client.predict() Usage Info
+---------------------------
+Named API endpoints: 3
+
+ - predict(param_0, param_1, param_2, param_3, api_name="/gpu_wrapped_execute_image") -> (value_3, value_4)
+    Parameters:
+     - [Slider] param_0: float (not required, defaults to:   0)  (numeric value between 0 and 0.8) 
+     - [Slider] param_1: float (not required, defaults to:   0)  (numeric value between 0 and 0.8) 
+     - [Image] param_2: filepath (required)  
+     - [Checkbox] param_3: bool (not required, defaults to:   True)  
+    Returns:
+     - [Image] value_3: filepath 
+     - [Image] value_4: filepath 
+
+ - predict(param_0, param_1, param_2, param_3, param_4, api_name="/gpu_wrapped_execute_video") -> (value_5, value_6)
+    Parameters:
+     - [Image] param_0: filepath (required)  
+     - [Video] param_1: Dict(video: filepath, subtitles: filepath | None) (required)  
+     - [Checkbox] param_2: bool (not required, defaults to:   True)  
+     - [Checkbox] param_3: bool (not required, defaults to:   True)  
+     - [Checkbox] param_4: bool (not required, defaults to:   True)  
+    Returns:
+     - [Video] value_5: Dict(video: filepath, subtitles: filepath | None) 
+     - [Video] value_6: Dict(video: filepath, subtitles: filepath | None) 
+
+ - predict(video_path, api_name="/is_square_video") -> value_15
+    Parameters:
+     - [Video] video_path: Dict(video: filepath, subtitles: filepath | None) (required)  
+    Returns:
+     - [Video] value_15: Dict(video: filepath, subtitles: filepath | None) 

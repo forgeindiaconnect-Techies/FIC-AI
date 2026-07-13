@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 175" width="440" height="175">
+  <!-- White Background -->
+  <rect width="440" height="175" fill="#FFFFFF"/>
+
+  <!-- Bracket (Navy Blue) -->
+  <rect x="12" y="18" width="20" height="139" fill="#1B3A6E"/>
+  <rect x="12" y="18" width="112" height="20" fill="#1B3A6E"/>
+  <rect x="12" y="137" width="90" height="20" fill="#1B3A6E"/>
+
+  <!-- Yellow pyramid inside bracket -->
+  <polygon points="67,130 32,130 67,68" fill="#F7C520"/>
+  <polygon points="67,68 102,130 67,130" fill="#D9A800"/>
+
+  <!-- Flag pole and pennant -->
+  <line x1="67" y1="68" x2="67" y2="40" stroke="#1B3A6E" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="67,40 90,47 67,54" fill="#F7C520"/>
+
+  <!-- Text: FORGE -->
+  <text x="142" y="84" font-family="'Arial Black', 'Arial Bold', Arial, sans-serif" font-weight="900" font-size="46" fill="#1B3A6E" letter-spacing="1">FORGE</text>
+
+  <!-- Text: INDIA -->
+  <text x="308" y="84" font-family="'Arial Black', 'Arial Bold', Arial, sans-serif" font-weight="900" font-size="46" fill="#F7C520" letter-spacing="1">INDIA</text>
+
+  <!-- Text: CONN ECT PVT.LTD -->
+  <text x="142" y="118" font-family="Arial, sans-serif" font-weight="700" font-size="22" fill="#1B7FAA" letter-spacing="1.5">CONN ECT PVT.LTD</text>
+
+  <!-- Text: SHAPING FUTURE -->
+  <text x="146" y="150" font-family="Arial, sans-serif" font-weight="400" font-size="15" fill="#555555" letter-spacing="5">SHAPING FUTURE</text>
+</svg>
