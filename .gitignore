@@ -13,6 +13,7 @@ dist/
 *.bin
 *.safetensors
 gfpgan/
+Wav2Lip/
 # Only exclude large AI weight files inside models/, not JS model files
 server/models/*.pth
 server/models/*.ckpt
